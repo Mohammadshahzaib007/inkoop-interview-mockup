@@ -40,7 +40,7 @@ body {
 }
 
 #icon-btn {
-    cursor: pointer;
+    cursor       : pointer;
     margin-bottom: 11px;
 }
 
@@ -243,7 +243,7 @@ body {
     }
 
     .heading-container {
-        justify-content: center;
+       margin-left: 1.875rem;
     }
 
     .side-container h1 {
@@ -271,14 +271,23 @@ body {
     .mobile-para {
         justify-content: flex-start;
         z-index        : -1;
+        margin: 0;
     }
 
     .mobile-para div {
         display    : flex !important;
         height     : 63px;
-        width      : 153px;
         margin-top : 40px;
-        margin-left: 8%;
+        margin-left: 30px !important;
+    }
+
+    .mobile-para div::after {
+        height: 105%;
+    }
+
+
+    .mobile-para div p {
+        font-size: 14px;
     }
 
     .hide-card-on-mobile {
@@ -290,10 +299,10 @@ body {
     }
 
     #cross-icons {
-        display: inline-block;
-        font-size: 25px;
+        display    : inline-block;
+        font-size  : 25px;
         /* position: absolute; */
-        right: 20px;
-        top: 20px;
+        right      : 20px;
+        top        : 20px;
     }
 }
