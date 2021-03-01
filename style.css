@@ -177,6 +177,10 @@ body {
     color: #9D9D9D;
 }
 
+.mobile-para {
+    display: none;
+}
+
 .card-container {
     width    : 100%;
     display  : flex;
