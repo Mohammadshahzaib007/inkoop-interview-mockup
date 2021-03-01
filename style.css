@@ -20,6 +20,7 @@ body {
 .side-nav {
     width       : 20%;
     padding-left: 1.25rem;
+    transition  : all .5s;
 }
 
 
@@ -35,7 +36,12 @@ body {
     font-size   : 30px;
     display     : inline-block;
     margin-right: 30px;
+    cursor      : pointer;
+}
+
+#icon-btn {
     cursor: pointer;
+    margin-bottom: 11px;
 }
 
 /* hamburger icon */
@@ -46,7 +52,6 @@ body {
     margin          : 3px;
     position        : relative;
     margin-left     : 30px;
-    cursor: pointer;
 }
 
 
@@ -58,7 +63,6 @@ body {
     background-color: #FF4E4E;
     position        : absolute;
     top             : 10px;
-    cursor: pointer;
 }
 
 .icon::after {
@@ -68,7 +72,6 @@ body {
     background-color: #FF4E4E;
     position        : absolute;
     top             : 20px;
-    cursor: pointer;
 }
 
 
@@ -77,6 +80,16 @@ body {
     line-height: 1;
     font-size  : 1.875rem;
     margin-top : 3.125rem;
+}
+
+#cross-icons {
+    position : absolute;
+    top      : 0;
+    right    : 0;
+    font-size: 30px;
+    color    : #FF4E4E;
+    cursor   : pointer;
+    display  : none;
 }
 
 .side-nav ul {
@@ -147,7 +160,7 @@ body {
     max-width  : 12.5rem;
     position   : relative;
     margin-left: 6.25rem;
-    
+
 }
 
 .heading-container div::after {
@@ -202,11 +215,14 @@ body {
     }
 
     .side-nav {
-        position : absolute;
-        top      : 0;
-        left     : 0;
-        transform: translateX(-200%);
-       
+        position        : fixed;
+        top             : 0;
+        left            : 0;
+        transform       : translateX(-200%);
+        background-color: white;
+        box-shadow      : 0 27px 38px rgb(0 0 0 / 50%);
+        height          : 100%;
+
     }
 
     .mobile-nav {
@@ -220,31 +236,31 @@ body {
     }
 
     .side-container {
-        margin-top: 40px;
-        width: 100%;
+        margin-top     : 40px;
+        width          : 100%;
         justify-content: center;
-        align-items: center;
+        align-items    : center;
     }
 
     .heading-container {
-       justify-content: center;
+        justify-content: center;
     }
 
     .side-container h1 {
         font-size: 1.875rem;
-        width: 70%
+        width    : 70%
     }
 
 
     .heading-container div {
         display: none;
-        margin: 0;
-      
+        margin : 0;
+
     }
 
     .card-container {
-        width: 100%;
-        /* align-items: center; */
+        width          : 100%;
+        /* align-items : center; */
         justify-content: center;
     }
 
@@ -254,17 +270,30 @@ body {
 
     .mobile-para {
         justify-content: flex-start;
+        z-index        : -1;
     }
 
     .mobile-para div {
-        display: flex !important;
-        height: 63px;
-        width: 153px;
-      margin-top: 40px;
+        display    : flex !important;
+        height     : 63px;
+        width      : 153px;
+        margin-top : 40px;
         margin-left: 8%;
     }
 
     .hide-card-on-mobile {
         display: none;
+    }
+
+    .mobile-nav h1 {
+        font-size: 1.875rem;
+    }
+
+    #cross-icons {
+        display: inline-block;
+        font-size: 25px;
+        /* position: absolute; */
+        right: 20px;
+        top: 20px;
     }
 }
